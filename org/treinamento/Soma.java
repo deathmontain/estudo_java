@@ -7,8 +7,8 @@ public class Soma {
 	private int total = 0;
 
 	public Soma(int primeiroNumero, int ultimoNumero) {
-		this.ultimoNumero = ultimoNumero;
 		this.primeiroNumero = primeiroNumero;
+		this.ultimoNumero = ultimoNumero;
 	}
 
 	public void calculaSoma() {
