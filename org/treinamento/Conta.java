@@ -19,14 +19,6 @@ public class Conta {
 		Conta MinhaConta;
 		MinhaConta = new Conta();
 		
-		int hexa = 1;
-		
-		System.out.println(10 == hexa);
-				
-				
-		
-		System.out.println(hexa);
-		
 		MinhaConta.nome = "William";
 		MinhaConta.saldo = 1000D;
 		MinhaConta.lim = 2000D;
