@@ -11,7 +11,7 @@ public class ProgressaoAritmetica {
 	}
 
 	public int obtemNumeroProgressao(int n) {
-		return n * razao;
+		return primeiroNumero + ((n - 1) * razao);
 	}
 	
 	public int obtemSomatorio(int posicao) {

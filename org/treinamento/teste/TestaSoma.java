@@ -9,15 +9,15 @@ public class TestaSoma {
 	private static int obtido;
 	private static ProgressaoAritmetica progressaoAritmetica;
 	
-	public static void testaSomatorio(){
+	public static void testaNumeroProgressao(){
 		
-		esperado = 9;
+		esperado = 11;
 		
 		System.out.println("Imprmindo somatorio.");
 		
 		try{
 			
-			obtido = progressaoAritmetica.obtemSomatorio(3);
+			obtido = progressaoAritmetica.obtemNumeroProgressao(4);
 			
 			if(esperado == obtido){
 				System.out.println("ok");
@@ -36,7 +36,7 @@ public class TestaSoma {
 
 		progressaoAritmetica = new ProgressaoAritmetica(5, 2);
 
-		testaSomatorio();
+		testaNumeroProgressao();
 		
 	}
 
