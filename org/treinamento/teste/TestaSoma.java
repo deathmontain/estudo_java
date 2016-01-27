@@ -5,22 +5,23 @@ import org.treinamento.teste.excpetions.ErroSomaException;
 
 public class TestaSoma {
 
-	private final static int esperado = 10;
+	private static int esperado;
 	private static int obtido;
+	private static ProgressaoAritmetica progressaoAritmetica;
 	
-	public static void main(String[] args) {
-
-		ProgressaoAritmetica progressaoAritmetica = new ProgressaoAritmetica(1, 4);
+	public static void testaSomatorio(){
 		
-		progressaoAritmetica.calculaSoma();
-		obtido = progressaoAritmetica.getTotal();
+		esperado = 9;
 		
 		System.out.println("Imprmindo somatorio.");
 		
 		try{
 			
+			obtido = progressaoAritmetica.obtemSomatorio(3);
+			
 			if(esperado == obtido){
 				System.out.println("ok");
+				System.out.println("obtido: " + obtido);
 			}else{
 				throw new ErroSomaException(esperado, obtido);
 			}
@@ -28,7 +29,15 @@ public class TestaSoma {
 		}catch(ErroSomaException e){
 			System.err.println(e);
 		}
+	}
+	
+	
+	public static void main(String[] args) {
 
+		progressaoAritmetica = new ProgressaoAritmetica(5, 2);
+
+		testaSomatorio();
+		
 	}
 
 }
