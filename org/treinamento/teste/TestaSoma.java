@@ -13,11 +13,33 @@ public class TestaSoma {
 		
 		esperado = 11;
 		
-		System.out.println("Imprmindo somatorio.");
+		System.out.println("Imprmindo numero da progressao.");
 		
 		try{
 			
 			obtido = progressaoAritmetica.obtemNumeroProgressao(4);
+			
+			if(esperado == obtido){
+				System.out.println("ok");
+				System.out.println("obtido: " + obtido);
+			}else{
+				throw new ErroSomaException(esperado, obtido);
+			}
+				
+		}catch(ErroSomaException e){
+			System.err.println(e);
+		}
+	}
+	
+	public static void testaSomatorioProgressao(){
+		
+		esperado = 5;
+		
+		System.out.println("Imprmindo somatorio.");
+		
+		try{
+			
+			obtido = progressaoAritmetica.obtemSomatorio(1);
 			
 			if(esperado == obtido){
 				System.out.println("ok");
@@ -37,7 +59,7 @@ public class TestaSoma {
 		progressaoAritmetica = new ProgressaoAritmetica(5, 2);
 
 		testaNumeroProgressao();
-		
+		testaSomatorioProgressao();		
 	}
 
 }

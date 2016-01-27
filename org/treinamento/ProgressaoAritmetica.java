@@ -14,12 +14,12 @@ public class ProgressaoAritmetica {
 		return primeiroNumero + ((n - 1) * razao);
 	}
 	
-	public int obtemSomatorio(int posicao) {
+	public int obtemSomatorio(int n) {
 		
-		int somatorio = primeiroNumero;
+		int somatorio = 0;
 		
-		for(int i = 1; i < posicao; i++){
-			somatorio += razao;
+		for(int i = 1; i <= n; i++){
+			somatorio += obtemNumeroProgressao(i);
 		}
 		
 		return somatorio;
