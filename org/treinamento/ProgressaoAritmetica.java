@@ -1,12 +1,12 @@
 package org.treinamento;
 
-public class Soma {
+public class ProgressaoAritmetica {
 
 	private final int ultimoNumero;
 	private final int primeiroNumero;
 	private int total = 0;
 
-	public Soma(int primeiroNumero, int ultimoNumero) {
+	public ProgressaoAritmetica(int primeiroNumero, int ultimoNumero) {
 		this.primeiroNumero = primeiroNumero;
 		this.ultimoNumero = ultimoNumero;
 	}

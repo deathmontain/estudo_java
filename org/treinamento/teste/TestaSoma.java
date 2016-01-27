@@ -1,6 +1,6 @@
 package org.treinamento.teste;
 
-import org.treinamento.Soma;
+import org.treinamento.ProgressaoAritmetica;
 import org.treinamento.teste.excpetions.ErroSomaException;
 
 public class TestaSoma {
@@ -10,10 +10,10 @@ public class TestaSoma {
 	
 	public static void main(String[] args) {
 
-		Soma soma = new Soma(1, 4);
+		ProgressaoAritmetica progressaoAritmetica = new ProgressaoAritmetica(1, 4);
 		
-		soma.calculaSoma();
-		obtido = soma.getTotal();
+		progressaoAritmetica.calculaSoma();
+		obtido = progressaoAritmetica.getTotal();
 		
 		System.out.println("Imprmindo somatorio.");
 		
