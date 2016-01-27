@@ -10,16 +10,20 @@ public class ProgressaoAritmetica {
 		this.razao = razao;
 	}
 
-	public int obtemNumeroProgressao(int n) {
+	public int obtemTermo(int n) {
 		return primeiroNumero + ((n - 1) * razao);
 	}
 	
-	public int obtemSomatorio(int n) {
+	public int obtemSomatorio(int n) throws IllegalArgumentException {
 		
 		int somatorio = 0;
 		
+		if(n < 0){
+			throw new IllegalArgumentException("O numero tem que ser maior que 0.");
+		}
+		
 		for(int i = 1; i <= n; i++){
-			somatorio += obtemNumeroProgressao(i);
+			somatorio += obtemTermo(i);
 		}
 		
 		return somatorio;

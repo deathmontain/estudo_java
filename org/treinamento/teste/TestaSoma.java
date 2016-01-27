@@ -11,13 +11,13 @@ public class TestaSoma {
 	
 	public static void testaNumeroProgressao(){
 		
-		esperado = 11;
+		esperado = -23;
 		
 		System.out.println("Imprmindo numero da progressao.");
 		
 		try{
 			
-			obtido = progressaoAritmetica.obtemNumeroProgressao(4);
+			obtido = progressaoAritmetica.obtemTermo(-13);
 			
 			if(esperado == obtido){
 				System.out.println("ok");
@@ -49,6 +49,8 @@ public class TestaSoma {
 			}
 				
 		}catch(ErroSomaException e){
+			System.err.println(e);
+		}catch(IllegalArgumentException e){
 			System.err.println(e);
 		}
 	}
