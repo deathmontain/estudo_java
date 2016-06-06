@@ -3,13 +3,15 @@ package org.treinamento;
 public class BalancoTrimestral {
 	
 	public static void main (String[] args){
-		double gastoJaneiro = 15000;
-		double gastoFevereiro = 23000;
-		double gastoMarco = 17000;
+		int gastoJaneiro = 15000;
+		int gastoFevereiro = 23000;
+		int gastoMarco = 17000;
 		
-		double gastoTrimestre = gastoJaneiro + gastoFevereiro + gastoMarco;
+		int gastoTrimestre = gastoJaneiro + gastoFevereiro + gastoMarco;
+		int mediaMensal = (gastoJaneiro + gastoFevereiro + gastoMarco)/3;
 		
 		System.out.println(gastoTrimestre);
+		System.out.println(mediaMensal);
 	}
 	
 	
