@@ -5,7 +5,7 @@ public class Funcionario {
 	String departamento;
 	Double salario;
 	Double salarioAnual;
-	String DataEntrada;
+	String dataEntrada;
 	String rg;
 	
 	void recebeAumento(double aumento){
@@ -18,6 +18,15 @@ public class Funcionario {
 		this.salarioAnual = calculaSalarioAnual;
 	}
 	
+	void mostraFuncionario(){
+		System.out.println("Nome:" + this.nome);
+		System.out.println("Rg:" + this.rg);
+		System.out.println("Departamento:" + this.departamento);
+		System.out.println("Data de entrada:" + this.dataEntrada);
+		System.out.println("Salario:" + this.salario);
+		System.out.println("SalarioAnual:" + this.salarioAnual);	
+	}
+	
 	public static void main (String[] Args){
 		Funcionario f1 = new Funcionario();
 		   
@@ -25,9 +34,7 @@ public class Funcionario {
 	     f1.salario = 100D;
 	     f1.recebeAumento(50);
 	     f1.calculaGanhoAnual(12);
-	     
-	     System.out.println("salario atual:" + f1.salario);
-	     System.out.println("ganho anual:" + f1.salarioAnual);	
+	     f1.mostraFuncionario();
 	}
 
 }
