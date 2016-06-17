@@ -15,27 +15,11 @@ public class ContaPrivate {
 		this.saldo += quantidade;	
 	}
 	
-	public double getsaldo(){
+	public double getSaldo(){
 		return this.saldo;
 	}
 	
 	public void atualiza(double taxa) {
 		this.saldo += this.saldo * taxa;
-	}
-	
-	public class ContaCorrente extends ContaPrivate {
-		  public void atualiza(double taxa) {
-		    this.saldo += this.saldo * taxa * 2;
-		  }
-		  
-		  public void deposita(double valor){ //@override
-			  this.saldo += valor - 0.10;
-		  }
-	}
-	
-	public class ContaPoupança extends ContaPrivate {
-		  public void atualiza(double taxa) {
-		    this.saldo += this.saldo * taxa * 3;
-		  }
-		}
+	}	
 }
