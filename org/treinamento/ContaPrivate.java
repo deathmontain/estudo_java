@@ -23,7 +23,7 @@ public class ContaPrivate {
 		this.saldo += this.saldo * taxa;
 	}
 	
-	public class ContaCorrente extends Conta {
+	public class ContaCorrente extends ContaPrivate {
 		  public void atualiza(double taxa) {
 		    this.saldo += this.saldo * taxa * 2;
 		  }
@@ -33,7 +33,7 @@ public class ContaPrivate {
 		  }
 	}
 	
-	public class ContaPoupança extends Conta {
+	public class ContaPoupança extends ContaPrivate {
 		  public void atualiza(double taxa) {
 		    this.saldo += this.saldo * taxa * 3;
 		  }
