@@ -1,8 +1,15 @@
 package org.treinamento;
 
 class Diretor extends Funcionario {
-
-	  public double getBonificacao() { //@override
-	    return this.salario * 1.4 + 800;
+	  private int senha;
+	    
+	  public boolean autentica(int Senha) {
+	    if(this.senha != Senha) {
+	      return false;
+	    }
+	    return true;
+	  }
+	  public double GetBonificacao() { //@override
+	    return this.Salario * 1.4 + 800;
 	  }
 }
