@@ -20,7 +20,18 @@ abstract class Funcionario {
 		this.salarioAnual = calculaSalarioAnual;
 	}
 	
-	void mostraFuncionario(){
+	void mostraGerente(){
+		System.out.println("Nome:" + this.nome);
+		System.out.println("Rg:" + this.rg);
+		System.out.println("Departamento:" + this.departamento);
+		System.out.println("Data de entrada:" + this.dataEntrada);
+		System.out.println("Salario:" + this.salario);
+		System.out.println("SalarioAnual:" + this.salarioAnual);
+		System.out.println("Bonificações torais:" + getBonificacao());
+		System.out.println("\n");
+	}
+	
+	void mostraDiretor(){
 		System.out.println("Nome:" + this.nome);
 		System.out.println("Rg:" + this.rg);
 		System.out.println("Departamento:" + this.departamento);
@@ -32,13 +43,22 @@ abstract class Funcionario {
 	
 	public static void main (String[] Args){
 		Gerente f1 = new Gerente();
-		   
+		Diretor f2 = new Diretor();
+		
+		
 	     f1.nome = "Hugo";
 	     f1.salario = 100D;
 	     f1.recebeAumento(50);
 	     f1.calculaGanhoAnual(12);
 	     f1.getBonificacao();
-	     f1.mostraFuncionario();
+	     
+	     f2.nome = "Joazinho";
+	     f2.salario = 80D;
+	     f2.recebeAumento(50);
+	     f2.calculaGanhoAnual(12);
+	     f2.getBonificacao();
+	     f1.mostraGerente();
+	     f2.mostraDiretor();
 	}
 
 }
