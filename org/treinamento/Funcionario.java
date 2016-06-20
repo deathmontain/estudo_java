@@ -27,15 +27,17 @@ abstract class Funcionario {
 		System.out.println("Data de entrada:" + this.dataEntrada);
 		System.out.println("Salario:" + this.salario);
 		System.out.println("SalarioAnual:" + this.salarioAnual);
+		System.out.println("Bonificações torais: " + getBonificacao());
 	}
 	
 	public static void main (String[] Args){
-		Funcionario f1 = new Gerente();
+		Gerente f1 = new Gerente();
 		   
 	     f1.nome = "Hugo";
 	     f1.salario = 100D;
 	     f1.recebeAumento(50);
 	     f1.calculaGanhoAnual(12);
+	     f1.getBonificacao();
 	     f1.mostraFuncionario();
 	}
 
