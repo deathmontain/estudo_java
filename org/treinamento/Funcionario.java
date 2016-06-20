@@ -1,12 +1,14 @@
 package org.treinamento;
 
-public class Funcionario {
+abstract class Funcionario {
 	String nome;
 	String departamento;
 	Double salario;
 	Double salarioAnual;
 	String dataEntrada;
 	String rg;
+	
+	abstract double getBonificacao();
 	
 	void recebeAumento(double aumento){
 		double novoSalario = this.salario + aumento;
@@ -24,7 +26,7 @@ public class Funcionario {
 		System.out.println("Departamento:" + this.departamento);
 		System.out.println("Data de entrada:" + this.dataEntrada);
 		System.out.println("Salario:" + this.salario);
-		System.out.println("SalarioAnual:" + this.salarioAnual);	
+		System.out.println("SalarioAnual:" + this.salarioAnual);
 	}
 	
 	public static void main (String[] Args){
