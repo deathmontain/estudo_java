@@ -30,7 +30,7 @@ abstract class Funcionario {
 	}
 	
 	public static void main (String[] Args){
-		Funcionario f1 = new Funcionario();
+		Funcionario f1 = new Gerente();
 		   
 	     f1.nome = "Hugo";
 	     f1.salario = 100D;
