@@ -1,32 +1,37 @@
 package org.treinamento;
 
 public class Conta {
-	int num;
-	String nome;
-	Double saldo;
-	Double lim;
+	int Num;
+	String Nome;
+	Double Saldo;
+	Double Lim;
 	
-	void saca(double quantidade){
-		double NovoSaldo = this.saldo - quantidade;
-		this.saldo = NovoSaldo;
+	void Saca(double Quantidade){
+		if (Quantidade > this.Saldo + this.Lim) { 
+		      System.out.println("Não posso sacar fora do limite!");
+		} else {
+			double NovoSaldo = this.Saldo - Quantidade;
+			this.Saldo = NovoSaldo;
+		  }
+		
 	}
 	
-	void deposita(double quantidade){
-		this.saldo += quantidade;	
+	void Deposita(double Quantidade){
+		this.Saldo += Quantidade;	
 	}
 
 	public static void main(String[] args) {
 		Conta MinhaConta;
 		MinhaConta = new Conta();
 		
-		MinhaConta.nome = "William";
-		MinhaConta.saldo = 1000D;
-		MinhaConta.lim = 2000D;
-		MinhaConta.saca(200);
-		MinhaConta.deposita(500);
+		MinhaConta.Nome = "William";
+		MinhaConta.Saldo = 1000D;
+		MinhaConta.Lim = 2000D;
+		MinhaConta.Saca(3500);
+		MinhaConta.Deposita(500);
 		
-		System.out.println("Saldo Atual: " + MinhaConta.saldo + "\nLimite: " 
-		+ MinhaConta.lim);
+		System.out.println("Saldo Atual: " + MinhaConta.Saldo + "\nLimite: " 
+		+ MinhaConta.Lim);
 	}
 
 }

@@ -3,14 +3,14 @@ package org.treinamento;
 public class Contas {
 
 	public static void main(String[] args) {
-		Conta[] minhasContas;
-		minhasContas = new Conta[10];
+		Conta[] MinhasContas;
+		MinhasContas = new Conta[10];
 		
 		Conta contaNova = new Conta();
-		contaNova.saldo = 1000D;
-		minhasContas[0] = contaNova;
+		ContaNova.Saldo = 1000D;
+		MinhasContas[0] = ContaNova;
 		
-        System.out.println(contaNova.saldo);
+        System.out.println(ContaNova.saldo);
 	}
 
 }

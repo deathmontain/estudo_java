@@ -46,10 +46,9 @@ abstract class Funcionario {
 		Gerente f1 = new Gerente();
 		Diretor f2 = new Diretor();
 		
-		
 	     f1.Nome = "Hugo";
 	     f1.Rg = "12345";
-	     f1.Departamento = "Gerente";
+	     f1.Departamento = "Gerencia";
 	     f1.Salario = 100D;
 	     f1.RecebeAumento(50);
 	     f1.CalculaGanhoAnual(12);
@@ -58,7 +57,7 @@ abstract class Funcionario {
 	     
 	     f2.Nome = "Joazinho";
 	     f2.Rg = "44444";
-	     f2.Departamento = "Diretor";
+	     f2.Departamento = "Direção";
 	     f2.Salario = 80D;
 	     f2.RecebeAumento(50);
 	     f2.CalculaGanhoAnual(12);

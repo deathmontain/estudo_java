@@ -1,6 +1,6 @@
 package org.treinamento;
 
-class Diretor extends Funcionario {
+class Diretor extends Funcionario implements Autenticavel{
 	  private int senha;
 	    
 	  public boolean autentica(int Senha) {
