@@ -6,11 +6,11 @@ public class Contas {
 		Conta[] MinhasContas;
 		MinhasContas = new Conta[10];
 		
-		Conta contaNova = new Conta();
-		ContaNova.Saldo = 1000D;
+		Conta ContaNova = new Conta();
+		ContaNova.Saldo = 3000D;
 		MinhasContas[0] = ContaNova;
 		
-        System.out.println(ContaNova.saldo);
+        System.out.println(ContaNova.Saldo);
 	}
 
 }

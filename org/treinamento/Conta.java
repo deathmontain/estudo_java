@@ -26,8 +26,8 @@ public class Conta {
 		
 		MinhaConta.Nome = "William";
 		MinhaConta.Saldo = 1000D;
-		MinhaConta.Lim = 2000D;
-		MinhaConta.Saca(3500);
+		MinhaConta.Lim = 1000D;
+		MinhaConta.Saca(1600);
 		MinhaConta.Deposita(500);
 		
 		System.out.println("Saldo Atual: " + MinhaConta.Saldo + "\nLimite: " 
