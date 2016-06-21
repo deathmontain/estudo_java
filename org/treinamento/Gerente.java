@@ -3,8 +3,8 @@ package org.treinamento;
 class Gerente extends Funcionario implements Autenticavel {
 	  private int senha;
 	    
-	  public boolean autentica(int Senha) {
-	    if(this.senha != Senha) {
+	  public boolean autentica(int senha) {
+	    if(this.senha != senha) {
 	      return false;
 	    }
 	    return true;
