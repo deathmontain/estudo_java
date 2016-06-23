@@ -6,14 +6,12 @@ public class Conta {
 	Double Saldo;
 	Double Lim;
 	
-	boolean Saca(double Quantidade){
+	void Saca(double Quantidade){
 		if (Quantidade > this.Saldo + this.Lim) { 
-		      System.out.println("Não posso sacar fora do limite!");
-		      return false;
+		      throw new IllegalArgumentException();
 		} else {
 			double NovoSaldo = this.Saldo - Quantidade;
 			this.Saldo = NovoSaldo;
-			return true;
 		  }
 		
 	}
@@ -29,7 +27,11 @@ public class Conta {
 		MinhaConta.Nome = "William";
 		MinhaConta.Saldo = 1000D;
 		MinhaConta.Lim = 1000D;
-		MinhaConta.Saca(1400);
+		try{
+		MinhaConta.Saca(1600);
+		}catch (IllegalArgumentException e){
+			System.out.println("Saldo insuficiente!");			
+		}
 		MinhaConta.Deposita(500);
 		
 		System.out.println("Saldo Atual: " + MinhaConta.Saldo + "\nLimite: " 

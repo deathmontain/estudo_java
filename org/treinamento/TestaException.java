@@ -7,7 +7,7 @@ public class TestaException {
 		  try{
 			  new java.io.FileInputStream("arquivo.txt");
 		  }catch (FileNotFoundException e){
-			  //System.out.println("Arquivo não foi encontrado");
+			  System.out.println("Arquivo não foi encontrado");
 			  e.printStackTrace();  
 		  }
 	  }
