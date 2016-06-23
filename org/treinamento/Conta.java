@@ -8,7 +8,7 @@ public class Conta {
 	
 	void Saca(double Quantidade){
 		if (Quantidade > this.Saldo + this.Lim) { 
-		      throw new IllegalArgumentException();
+		      throw new IllegalArgumentException("Saldo insuficiente!");
 		} else {
 			double NovoSaldo = this.Saldo - Quantidade;
 			this.Saldo = NovoSaldo;
@@ -17,8 +17,12 @@ public class Conta {
 	}
 	
 	void Deposita(double Quantidade){
-		this.Saldo += Quantidade;	
-	}
+		if (Quantidade < 0){
+			throw new IllegalArgumentException("O valor depositado não pode ser negativo!");
+	    }else{
+	    	this.Saldo += Quantidade;
+	    }
+	}	
 
 	public static void main(String[] args) {
 		Conta MinhaConta;
@@ -28,11 +32,15 @@ public class Conta {
 		MinhaConta.Saldo = 1000D;
 		MinhaConta.Lim = 1000D;
 		try{
-		MinhaConta.Saca(1600);
+		MinhaConta.Saca(2400);
 		}catch (IllegalArgumentException e){
-			System.out.println("Saldo insuficiente!");			
+			System.out.println(e.getMessage());			
 		}
+		try{
 		MinhaConta.Deposita(500);
+		}catch (IllegalArgumentException e){
+			System.out.println(e.getMessage());
+		}
 		
 		System.out.println("Saldo Atual: " + MinhaConta.Saldo + "\nLimite: " 
 		+ MinhaConta.Lim);
