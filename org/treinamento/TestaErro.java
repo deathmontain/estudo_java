@@ -24,5 +24,6 @@ class TesteErro {
 	    }catch(ArrayIndexOutOfBoundsException e){
 	    System.out.println("Erro " + e);
 	  }
+	    System.out.println("fim do metodo2");
 	  }
 }
