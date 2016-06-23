@@ -18,7 +18,7 @@ public class Conta {
 	
 	void Deposita(double Quantidade){
 		if (Quantidade < 0){
-			throw new IllegalArgumentException("O valor depositado não pode ser negativo!");
+			throw new SaldoInsuficienteException("O valor depositado não pode ser negativo!");
 	    }else{
 	    	this.Saldo += Quantidade;
 	    }
@@ -32,13 +32,13 @@ public class Conta {
 		MinhaConta.Saldo = 1000D;
 		MinhaConta.Lim = 1000D;
 		try{
-		MinhaConta.Saca(2400);
+			MinhaConta.Saca(2400);
 		}catch (IllegalArgumentException e){
 			System.out.println(e.getMessage());			
 		}
 		try{
-		MinhaConta.Deposita(500);
-		}catch (IllegalArgumentException e){
+			MinhaConta.Deposita(-500);
+		}catch (SaldoInsuficienteException e){
 			System.out.println(e.getMessage());
 		}
 		

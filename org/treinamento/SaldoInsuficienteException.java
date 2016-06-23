@@ -1,6 +1,6 @@
 package org.treinamento;
 
-public class SaldoInsuficienteException extends Exception{
+public class SaldoInsuficienteException extends RuntimeException {
 	SaldoInsuficienteException(String message){
 		super (message);
 	}
