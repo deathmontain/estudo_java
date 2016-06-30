@@ -8,12 +8,11 @@ public class TestaContas {
 	    cc.deposita(1000); 
 	    cp.deposita(1000);
 	  
-
 	    cc.atualiza(0.01);
 	    cp.atualiza(0.01);
 
-	    System.out.println(cc.getSaldo());
-	    System.out.println(cp.getSaldo());
+	    System.out.println("Saldo da Conta Corrente: " + cc.getSaldo());
+	    System.out.println("Saldo da Conta Poupança: " + cp.getSaldo());
 
 	  }
 }
