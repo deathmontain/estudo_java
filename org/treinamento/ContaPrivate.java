@@ -1,6 +1,6 @@
 package org.treinamento;
 
-public class ContaPrivate {
+public abstract class ContaPrivate {
 	private int num;
 	private String nome;
 	protected double saldo;
@@ -11,15 +11,11 @@ public class ContaPrivate {
 		this.saldo = NovoSaldo;
 	}
 	
-	void deposita(double quantidade){
-		this.saldo += quantidade;	
-	}
+	abstract double deposita(double valor);
 	
 	public double getSaldo(){
 		return this.saldo;
 	}
 	
-	public void atualiza(double taxa) {
-		this.saldo += this.saldo * taxa;
-	}	
+	abstract double atualiza(double valor);
 }
